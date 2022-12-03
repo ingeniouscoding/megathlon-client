@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ShopContainerComponent } from './components';
+
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./lazy/shop/shop.module')
-      .then((m) => m.ShopModule),
+    component: ShopContainerComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class ShopRoutingModule { }
