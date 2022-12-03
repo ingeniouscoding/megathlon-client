@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { LayoutModule } from 'src/app/global/layout/layout.module';
 
-import { ShopContainerComponent } from './components';
+import { ShopContainerComponent, ShowcasePageComponent } from './components';
 import { ShopRoutingModule } from './shop-routing.module';
 
 @NgModule({
   declarations: [
     ShopContainerComponent,
+    ShowcasePageComponent,
   ],
   imports: [
     CommonModule,
