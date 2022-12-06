@@ -1,0 +1,22 @@
+<div class="carousel" *ngIf="vm$ | async as vm">
+
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <a href="#">
+      <img
+        *ngIf="i === vm.index"
+        [src]="slide.src"
+        [alt]="slide.alt"
+        class="slide"
+        @carouselAnimation />
+    </a>
+  </ng-container>
+
+  <button class="control prev" (click)="onPreviousSlide()">
+    <span class="arrow left"></span>
+  </button>
+
+  <button class="control next" (click)="onNextSlide()">
+    <span class="arrow right"></span>
+  </button>
+
+</div>
